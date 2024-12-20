@@ -1,0 +1,37 @@
+@import "../../colors.scss";
+
+.app-login-container {
+    
+    h2 {
+        text-align: center;
+    }
+
+    .form {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        input, button {
+            margin-bottom: 20px;
+            padding: 8px 20px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        input {
+            border: 1px solid $background;
+        }
+
+        button {
+            cursor: pointer;
+            background: $black;
+            color: $white;
+
+            &:hover {
+                background: $background;
+            }
+        }
+    }
+}

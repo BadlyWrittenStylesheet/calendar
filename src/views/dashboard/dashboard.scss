@@ -1,0 +1,66 @@
+@import "../../colors.scss";
+
+.app-dashboard-container {
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .logout {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        
+        button {
+            cursor: pointer;
+            background: $black;
+            color: $white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            border: none;
+
+            &:hover {
+                background: $main;
+            }
+        }
+    }
+
+    .table {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+
+        gap: 2rem;
+        
+        .col {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+
+            .day {
+                text-align: center;
+                padding: 10px 20px;
+                color: $main;
+                font-weight: bold;
+            }
+            .row {
+                margin: 2px 0;
+                display: flex;
+
+                .lesson {
+                    padding: 2px 4px;
+                    color: $black;
+                    background: $background;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .subject {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

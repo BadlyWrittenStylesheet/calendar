@@ -1,0 +1,60 @@
+@import "../../colors.scss";
+
+.app-calendar-container {
+  .table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    .col {
+      padding: 10px;
+      min-width: 200px;
+
+      .day {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 20px;
+        color: $main;
+        font-weight: bold;
+      }
+
+
+      .selected {
+        background: $background;
+      }
+      .row {
+        border-bottom: 1px solid $background;
+        padding: 8px 4px 4px 8px;
+        transition: background 300ms;
+        position: relative;
+
+        &.highlighted {
+          &::before {
+            content: "!";
+            position: absolute;
+            top: 0;
+            right: 0;
+            rotate: 5deg;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: red
+          }
+        }
+
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .lesson {
+          display: inline-block;
+          font-weight: bold;
+          margin-right: 8px;
+          margin-bottom: 8px;
+        }
+      }  
+    }
+  }
+}
